@@ -1,6 +1,5 @@
 # cw-take-home-1-ts  
 
-# cw-take-home-1
 
 This project is the first instruction in a take-home test.
 
