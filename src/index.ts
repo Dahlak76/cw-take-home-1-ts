@@ -1,8 +1,25 @@
 import express, { Request, Response } from "express";
 import { check, validationResult } from "express-validator";
+import cors from 'cors';
+interface corsOptions {
+  origin: string;
+  optionsSuccessStatus: number;
+}
 
 const app = express();
+const corsOptions: corsOptions = {  
+  origin: '*',  
+  optionsSuccessStatus: 200 
+}
+
+// const allowedOrigins = ['*'];
+// const options: cors.CorsOptions = {
+//   origin: allowedOrigins
+// };
 app.use(express.json());
+app.use(cors(corsOptions));
+
+//app.use(express.json());
  
 // Middleware for validating the request payload
 const validatePayload = [
