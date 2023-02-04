@@ -49,5 +49,5 @@ app.post("/transform", validatePayload, (req: Request, res: Response) => {
   res.status(200).json({ transformedPayload });
 });
 
-const port = process.env.PORT || 3004;
+const port = process.env.PORT || 3007;
 app.listen(port, () => console.log(`Server running on port ${port}`));
